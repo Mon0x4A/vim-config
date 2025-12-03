@@ -230,6 +230,9 @@ map <leader>zs :set spell!<CR>
 " Toggle word wrap
 map <leader>zw :set wrap!<CR>
 
+" Open manual syntax specification
+map <leader>zy :set syntax=<Tab>
+
 " Open a new tab
 map <leader>nt :tabnew<CR>
 " Open a new horizontal window split
