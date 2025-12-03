@@ -217,6 +217,13 @@ endif
 map <leader>a <C-]>
 map <leader>ga :pop<CR>
 map <leader><C-a> :tselect<CR>
+nnoremap <C-t> <Nop>
+
+" Make the arrows send hjkl
+inoremap <Left> h
+inoremap <Down> j
+inoremap <Up> k
+inoremap <Right> l
 
 " Open a shell window
 map <leader>s :terminal<CR>
@@ -231,7 +238,7 @@ map <leader>zs :set spell!<CR>
 map <leader>zw :set wrap!<CR>
 
 " Open manual syntax specification
-map <leader>zy :set syntax=<Tab>
+map <leader>zy :set syntax=
 
 " Open a new tab
 map <leader>nt :tabnew<CR>
@@ -528,7 +535,8 @@ set matchtime=3
 
 " Set special rendering for tab indent levels and trailing spaces
 set list
-set listchars=multispace:❘\ \ \ ,trail:·
+set listchars=multispace:❘\ \ \ ,trail:·,tab:▸\ 
+",eol:¬
 hi SpecialKey guibg=NONE
 
 
@@ -642,7 +650,7 @@ let g:terminal_ansi_colors = [
   \'#8C8073', '#6C71C4', '#A682B8', '#FDF6E3' ]
 
 " Set terminal colors
-hi Terminal guibg=#151515
+hi Terminal guibg=#0A0A0A
 hi Terminal guifg=#DCD3CB
 hi StatusLineTerm guibg=#775f73 guifg=#e5ddd3
 hi StatusLineTermNC guibg=#484644 guifg=#252025
